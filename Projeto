@@ -1,4 +1,5 @@
 programa {
+  inclua biblioteca Util --> u
     funcao inicio() {
         inteiro opcao
 
@@ -11,31 +12,39 @@ programa {
             escreva("4 - Sacar\n")
             escreva("5 - Buscar Conta\n")
             escreva("===========================\n")
+
             escreva("Escolha uma opção: ")
             leia(opcao)
 
             escolha (opcao) {
                 caso 0:
-                    escreva("Saindo do sistema...\n")
+                    escreva("Saindo do sistema.")
                     pare
                 caso 1:
-                    escreva("Opção Criar Conta selecionada.\n")
+                    escreva("Opção Criar Conta selecionada.")
                     pare
                 caso 2:
-                    escreva("Opção Exibir Contas selecionada.\n")
+                    escreva("Opção Exibir Contas selecionada.")
                     pare
                 caso 3:
-                    escreva("Opção Depositar selecionada.\n")
+                    escreva("Opção Depositar selecionada.")
                     pare
                 caso 4:
-                    escreva("Opção Sacar selecionada.\n")
+                    escreva("Opção Sacar selecionada.")
                     pare
                 caso 5:
-                    escreva("Opção Buscar Conta selecionada.\n")
+                    escreva("Opção Buscar Conta selecionada.")
                     pare
-                padrao:
-                    escreva("Opção inválida. Tente novamente.\n")
+                caso contrario:
+                    escreva("Opção inválida. Tente novamente.")
             }
+            u.aguarde(1000)
+            escreva(".")
+            u.aguarde(1000)
+            escreva(".")
+            u.aguarde(1000)
+            limpa()
+
         } enquanto (opcao != 0)
     }
 }

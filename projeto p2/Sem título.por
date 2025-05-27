@@ -42,7 +42,7 @@ programa {
         } enquanto (opcao != 0)
     }
 
-    // 1️⃣ Função do menu
+    //  Função do menu
     funcao inteiro mostrarMenu() {
         inteiro opcao
 
@@ -60,7 +60,7 @@ programa {
         retorna opcao
     }
 
-    // 3️⃣ Funções de cada operação
+    // Funções de cada operação
     funcao vazio criarConta() {
         escreva("Opção Criar Conta selecionada.\n")
         u.aguarde(3000)

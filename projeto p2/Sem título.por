@@ -1,12 +1,10 @@
-inclua biblioteca Util --> u
-
 programa {
+  inclua biblioteca Util --> u
     // Função principal
     funcao inicio() {
         inteiro opcao
 
         faca {
-            limpa()
             opcao = mostrarMenu()
 
             escolha (opcao) {
@@ -35,10 +33,13 @@ programa {
                     buscarConta()
                     pare
 
-                padrao:
+                caso contrario:
                     escreva("Opção inválida. Tente novamente.\n")
-                    u.aguarde(3000)
             }
+
+            u.aguarde(3000)
+            limpa()
+
         } enquanto (opcao != 0)
     }
 
@@ -57,32 +58,32 @@ programa {
         escreva("Escolha uma opção: ")
         leia(opcao)
 
-        retorna opcao
+        retorne opcao
     }
 
     // Funções de cada operação
     funcao vazio criarConta() {
         escreva("Opção Criar Conta selecionada.\n")
-        u.aguarde(3000)
+
     }
 
     funcao vazio exibirContas() {
         escreva("Opção Exibir Contas selecionada.\n")
-        u.aguarde(3000)
+       
     }
 
     funcao vazio depositar() {
         escreva("Opção Depositar selecionada.\n")
-        u.aguarde(3000)
+    
     }
 
     funcao vazio sacar() {
         escreva("Opção Sacar selecionada.\n")
-        u.aguarde(3000)
+  
     }
 
     funcao vazio buscarConta() {
         escreva("Opção Buscar Conta selecionada.\n")
-        u.aguarde(3000)
+  
     }
 }

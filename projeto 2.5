@@ -1,1 +1,76 @@
-.
+#include <stdio.h>
+#include <stdlib.h>
+
+void criarConta() {
+    printf("Opção Criar Conta selecionada.\n");
+}
+
+void exibirContas() {
+    printf("Opção Exibir Contas selecionada.\n");
+}
+
+void depositar() {
+    printf("Opção Depositar selecionada.\n");
+}
+
+void sacar() {
+    printf("Opção Sacar selecionada.\n");
+}
+
+void buscarConta() {
+    printf("Opção Buscar Conta selecionada.\n");
+}
+
+int mostrarMenu() {
+    int opcao;
+    printf("===== SISTEMA BANCÁRIO =====\n");
+    printf("0 - Sair\n");
+    printf("1 - Criar Conta\n");
+    printf("2 - Exibir Contas\n");
+    printf("3 - Depositar\n");
+    printf("4 - Sacar\n");
+    printf("5 - Buscar Conta\n");
+    printf("===========================\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
+    return opcao;
+}
+
+int main() {
+    int opcao;
+
+    do {
+        system("clear");
+        opcao = mostrarMenu();
+
+        switch (opcao) {
+            case 0:
+                printf("Saindo do sistema...\n");
+                break;
+            case 1:
+                criarConta();
+                break;
+            case 2:
+                exibirContas();
+                break;
+            case 3:
+                depositar();
+                break;
+            case 4:
+                sacar();
+                break;
+            case 5:
+                buscarConta();
+                break;
+            default:
+                printf("Opção inválida. Tente novamente.\n");
+        }
+
+        printf("\nPressione Enter para continuar...\n");
+        getchar();
+        getchar();
+
+    } while (opcao != 0);
+
+    return 0;
+}
